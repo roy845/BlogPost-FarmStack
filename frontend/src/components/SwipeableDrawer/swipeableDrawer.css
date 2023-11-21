@@ -1,0 +1,23 @@
+.logo-drawer {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    /* Add padding as needed */
+}
+
+.logo-drawer img {
+    margin-right: 8px;
+    /* Adjust the margin as needed */
+    cursor: pointer;
+}
+
+.logoText {
+    color: black;
+    font-size: 18px;
+    /* Adjust the font size as needed */
+}
+
+.list-item:hover {
+    background-color: #2074d4;
+    color: white;
+}
