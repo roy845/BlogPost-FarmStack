@@ -7,7 +7,7 @@ defaults:
 jobs:
   job1:
     env:
-      DATABASE_HOSTNAME: localhost
+      DATABASE_HOSTNAME: db
       DATABASE_PORT: 5432
       DATABASE_PASSWORD: admin
       DATABASE_NAME: fastapi
