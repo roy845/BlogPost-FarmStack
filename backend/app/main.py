@@ -1,13 +1,13 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from .database import Base
+from . import models
 from .routers import users, posts, auth, vote, voteComment, comment
 from .database import engine
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 
-Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
 
 
 app = FastAPI()
