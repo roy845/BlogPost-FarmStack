@@ -2,7 +2,7 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from backend.app.database import get_db
-from ..app.main import app
+from backend.app.main import app
 from ..app.config import settings
 from ..app.database import Base
 from fastapi import status
