@@ -4,9 +4,19 @@ on: [push, pull_request]
 defaults:
   run:
     working-directory: backend
-
 jobs:
   job1:
+    env:
+      DATABASE_HOSTNAME: localhost
+      DATABASE_PORT: 5432
+      DATABASE_PASSWORD: admin
+      DATABASE_NAME: fastapi
+      DATABASE_USERNAME: postgres
+      SECRET_KEY: 09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7
+      ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 60
+      EMAIL_ADDRESS: royatali94@gmail.com
+      EMAIL_PASSWORD: mdixrtekjwkhychs
     runs-on: ubuntu-latest
     steps:
       - name: pulling git repo
@@ -26,4 +36,4 @@ jobs:
       - name: test with pytest
         run: |
           pip install pytest
-          pytest backend/tests
+          pytest tests/
