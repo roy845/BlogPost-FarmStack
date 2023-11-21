@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from . import models
+from .database import Base
 from .routers import users, posts, auth, vote, voteComment, comment
 from .database import engine
 from fastapi.middleware.cors import CORSMiddleware
